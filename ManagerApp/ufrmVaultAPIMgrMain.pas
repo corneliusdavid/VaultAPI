@@ -99,7 +99,6 @@ type
     procedure ShowRateLimits(Sender: TObject);
     procedure SetStats(const RateLimitDay, RateLimitMonth, RateLimitRamainingDay, RateLimitRemainingMonth: Integer);
     procedure ShowFileContents;
-    procedure SaveNewContent;
     procedure ShowError;
     procedure ShowInfo(const InfoMsg: string);
     procedure ListFolders;
@@ -566,55 +565,6 @@ begin
   finally
     IniFile.Free;
   end;
-end;
-
-procedure TfrmVaultAPIMgrMain.SaveNewContent;
-var
-  Success: Boolean;
-  LPath: string;
-  LContent: string;
-  LEncryptionKey: string;
-  LEncryptedType: string;
-begin
-  Success := False;
-
-  AniIndicator.Enabled := True;
-  AniIndicator.Visible := True;
-
-  LPath := edtBrowsePath.Text;
-  if not EndsText('/', LPath) then
-    LPath := LPath + '/';
-  LPath := LPath + edtNewContentName.Text;
-  LContent := mmoFile.Text;
-
-  if chkUseCustomEncryptionKey.IsChecked then
-    LEncryptionKey := edtEncryptionKey.Text
-  else
-    LEncryptionKey := EmptyStr;
-
-  TTask.Create(procedure begin
-      try
-        if FdmVaultAPI.NewContent(LContent, LPath, LEncryptionKey) then
-          Success := True;
-      finally
-        TThread.Synchronize(nil, procedure begin
-          if Success then begin
-            actPreviousTab.Execute;
-            if FdmVaultAPI.BrowsePath(edtBrowsePath.Text) then
-              ListFiles;
-            if chkUseCustomEncryptionKey.IsChecked then
-              LEncryptedType := 'the custom encryption key.'
-            else
-              LEncryptedType := 'the current encryption key.';
-            ShowInfo('The new named content has been added with ' + LEncryptedType);
-          end else
-            ShowError;
-
-          AniIndicator.Enabled := False;
-          AniIndicator.Visible := False;
-        end);
-      end;
-    end).Start;
 end;
 
 procedure TfrmVaultAPIMgrMain.SetAPIKey;
