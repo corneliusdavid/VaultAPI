@@ -1,0 +1,114 @@
+inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
+  ClientHeight = 616
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited VaultTabs: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 616.000000000000000000
+    Sizes = (
+      400s
+      567s
+      400s
+      567s)
+    inherited tabExplore: TTabItem
+      Size.Width = 200.000000000000000000
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited edtBrowsePath: TEdit
+        Size.Width = 360.000000000000000000
+        inherited lblBrowsePath: TLabel
+          Position.X = 1.000000000000000000
+          Position.Y = -25.000000000000000000
+          Size.Width = 120.000000000000000000
+        end
+      end
+      inherited lbFolders: TListBox
+        Size.Width = 360.000000000000000000
+        Size.Height = 2.000000000000000000
+        Viewport.Width = 329.000000000000000000
+        Viewport.Height = 98.000000000000000000
+      end
+      inherited lbFiles: TListBox
+        Position.Y = 185.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 305.000000000000000000
+        Viewport.Width = 329.000000000000000000
+        Viewport.Height = 161.000000000000000000
+      end
+      inherited AccountExpander: TExpander
+        Opacity = 0.000000000000000000
+        Size.Width = 360.000000000000000000
+        ContentSize = '200'
+      end
+      inherited lblContent: TLabel
+        Position.Y = 154.000000000000000000
+        Size.Width = 360.000000000000000000
+        inherited chkUseCustomEncryptionKey: TCheckBox
+          Position.X = -21.000000000000000000
+        end
+      end
+      inherited pnlEncryptKey: TPanel
+        Opacity = 0.000000000000000000
+        Position.Y = 510.000000000000000000
+        Size.Width = 360.000000000000000000
+        inherited btnNewEncryptionKey: TButton
+          Position.X = 204.000000000000000000
+        end
+        inherited btnDeleteEncryptionKey: TButton
+          Position.X = 284.000000000000000000
+        end
+        inherited edtEncryptionKey: TEdit
+          Size.Width = 87.000000000000000000
+        end
+      end
+    end
+    inherited tabFile: TTabItem
+      Size.Width = 200.000000000000000000
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited lblFilePath: TLabel
+        Margins.Bottom = 1.000000000000000000
+        Size.Width = 390.000000000000000000
+      end
+      inherited mmoFile: TMemo
+        Size.Width = 394.000000000000000000
+        Size.Height = 480.000000000000000000
+        Viewport.Width = 394.000000000000000000
+        Viewport.Height = 480.000000000000000000
+      end
+      inherited lblFileDates: TLabel
+        Margins.Top = 1.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 390.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited lblContentName: TLabel
+        Position.Y = 28.000000000000000000
+        Size.Width = 390.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+  inherited AniIndicator: TAniIndicator
+    Enabled = True
+  end
+  inherited StyleBook: TStyleBook
+    Styles = <
+      item
+      end>
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end

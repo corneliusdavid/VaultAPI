@@ -1,0 +1,87 @@
+inherited frmVaultAPIMgrMain_Windows: TfrmVaultAPIMgrMain_Windows
+  DesignerMasterStyle = 0
+  inherited VaultTabs: TTabControl
+    Sizes = (
+      512s
+      547s
+      512s
+      547s)
+    inherited tabExplore: TTabItem
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited lbFolders: TListBox
+        Viewport.Width = 536.000000000000000000
+        Viewport.Height = 40.000000000000000000
+      end
+      inherited lbFiles: TListBox
+        Viewport.Width = 536.000000000000000000
+        Viewport.Height = 251.000000000000000000
+      end
+      inherited AccountExpander: TExpander
+        ContentSize = '200'
+        inherited Rectangle1: TRectangle
+          inherited grpStats: TGroupBox
+            Anchors = [akLeft, akTop, akRight]
+            Size.Width = 165.000000000000000000
+            inherited lblRateLimitDay: TLabel
+              Size.Width = 130.000000000000000000
+            end
+            inherited lblRateLimitMonth: TLabel
+              Size.Width = 130.000000000000000000
+            end
+            inherited lblRateLimitRemainingDay: TLabel
+              Size.Width = 130.000000000000000000
+            end
+            inherited lblRateLimitRemainingMonth: TLabel
+              Size.Width = 130.000000000000000000
+            end
+          end
+          inherited edtAPIKey: TEdit
+            Anchors = [akLeft, akTop, akRight]
+            Size.Width = 165.000000000000000000
+          end
+        end
+      end
+      inherited pnlEncryptKey: TPanel
+        Opacity = 0.000000000000000000
+      end
+    end
+    inherited tabFile: TTabItem
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited lblFilePath: TLabel
+        Margins.Bottom = 1.000000000000000000
+      end
+      inherited mmoFile: TMemo
+        Size.Height = 460.000000000000000000
+        Viewport.Width = 506.000000000000000000
+        Viewport.Height = 460.000000000000000000
+      end
+      inherited lblFileDates: TLabel
+        Margins.Top = 1.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.Y = 54.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited lblContentName: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+  inherited AniIndicator: TAniIndicator
+    Enabled = True
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
