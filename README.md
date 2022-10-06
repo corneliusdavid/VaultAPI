@@ -4,8 +4,8 @@ The [VaultAPI](https://apilayer.com/marketplace/vault-api) is a "_Full featured 
 
 ### Delphi DataModule
 
-Since I use Delphi and there doesn't seem to be any other libraries out there for this service already, I wrote my own. I built it as a DataModule using Delphi 11 Alexandria so if you want to use an older version of Delphi, you'll need to fork this repository as I'm only using this in new projects at the moment.
+Since I use Delphi and there doesn't seem to be any other libraries out there for this service already, I wrote my own. I built it as a DataModule using Delphi 11 Alexandria so if you want to use an older version of Delphi, you'll need to fork this repository as I'm only using this in new projects at the moment and Delphi 11 forms and data modules add extra properties that older versions of Delphi don't know how to handle.
 
-## Mobile Manager App - Coming
+## Cross-Platform App for Managing Your Vault
 
-In addition to the DataModule that can be included in your Delphi project, I'm also building a simple management program. It allows you to locally store your VaultAPI key and browse the folders and files you have stored. It's being built with FireMonkey and I plan to make it available on mobile devices. Since, as I stated above, one of the main uses is to remotely control licensing of distributed apps, my plan is that with the mobile app, I can create a new license for a client and activate it using just my phone.
+In addition to the DataModule that can be included in your Delphi project, I've also built a simple management program--or Vault Explorer. It allows you to locally store your VaultAPI key and browse the folders and files (named content) you have stored. It's built with Delphi 11 using FireMonkey and currently runs on Windows and MacOS. I plan to make it available on mobile devices some day.
