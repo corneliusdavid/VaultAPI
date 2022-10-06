@@ -283,6 +283,7 @@ begin
   TryStrToInt(ARESTResponse.Headers.Values['X-RateLimit-Limit-Month'], FRateLimitMonthly);
   TryStrToInt(ARESTResponse.Headers.Values['X-RateLimit-Remaining-Day'], FRateLimitRemainingDay);
   TryStrToInt(ARESTResponse.Headers.Values['X-RateLimit-Remaining-Month'], FRateLimitRemainingMonth);
+
   DoOnRateLimitsSet;
 end;
 
@@ -295,6 +296,9 @@ begin
     FLastError := ARESTResponse.StatusText;
 
     Result := ARESTResponse.Status.SuccessOK_200;
+    DoOnAPIResult;
+
+    SetRateLimitsFromResponseHeader(ARESTResponse);
   except
     on e:Exception do begin
       FLastStatus := -1;
@@ -349,7 +353,6 @@ begin
   if IsApiKeySet then begin
     SetApiKeyRequestParam(reqGetKey);
     Result := ExecuteRequest(reqGetKey, respGetKey);
-    SetRateLimitsFromResponseHeader(respGetKey);
 
     if Result then begin
       if respGetKey.Content.Contains('"message"') then
@@ -370,8 +373,6 @@ begin
   if IsApiKeySet then begin
     SetApiKeyRequestParam(reqDeleteKey);
     Result := ExecuteRequest(reqDeleteKey, respDeleteKey);
-    DoOnAPIResult;
-    SetRateLimitsFromResponseHeader(respDeleteKey);
 
     if Result then
       if StartsText('null', respDeleteKey.Content) then
@@ -434,8 +435,6 @@ begin
                                             ParseVaultDateTime(LFile.P['last_updated'].Value)));
         end;
 
-        SetRateLimitsFromResponseHeader(respBrowse);
-
         Result := True;
       end;
     end;
@@ -464,7 +463,6 @@ begin
     SetBodyRequestParam(reqNewContent, AContent);
 
     Result := ExecuteRequest(reqNewContent, respNewContent);
-    SetRateLimitsFromResponseHeader(respNewContent);
 
     if Result then
       FLastContent := AContent;
@@ -481,7 +479,6 @@ begin
     SetEncryptionKeyParam(reqGetContent, AEncryptionKey);
 
     Result := ExecuteRequest(reqGetContent, respGetContent);
-    SetRateLimitsFromResponseHeader(respGetContent);
 
     if Result then
       FLastContent := respGetContent.JSONValue.P['data'].Value;
@@ -497,7 +494,6 @@ begin
     SetPathRequestParam(reqDeleteContent, APath);
 
     Result := ExecuteRequest(reqDeleteContent, respDeleteContent);
-    SetRateLimitsFromResponseHeader(respDeleteContent);
   end;
 end;
 
