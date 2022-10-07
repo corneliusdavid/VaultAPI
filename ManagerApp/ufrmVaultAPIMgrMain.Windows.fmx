@@ -33,7 +33,7 @@ inherited frmVaultAPIMgrMain_Windows: TfrmVaultAPIMgrMain_Windows
       end
       inherited AccountExpander: TExpander
         Size.Width = 480.000000000000000000
-        ContentSize = '200'
+        ContentSize = '230'
         inherited grpStats: TGroupBox
           Size.Width = 433.000000000000000000
         end

@@ -172,7 +172,8 @@ Coordinates=1056,685,103,33
 Coordinates=875,685,69,33
 
 [edtEncryptionKey]
-Coordinates=185,236,102,51
+Coordinates=185,236,102,33
+Visible=False
 
 [btnNewEncryptionKey]
 Coordinates=393,770,124,33
@@ -190,40 +191,50 @@ Visible=False
 Coordinates=280,40,93,51
 
 [lblRateLimitRemainingMonth]
-Coordinates=0,0,156,51
+Coordinates=0,0,156,33
+Visible=False
 
 [lblRateLimitRemainingDay]
-Coordinates=411,71,144,51
+Coordinates=411,71,144,33
+Visible=False
 
 [lblRateLimitMonth]
-Coordinates=411,141,104,51
+Coordinates=411,141,104,33
+Visible=False
 
 [btnCancel]
-Coordinates=175,1,64,51
+Coordinates=175,1,64,33
+Visible=False
 
 [actNewContentCancel]
 Coordinates=277,1,123,33
 
 [lblAPIKey]
-Coordinates=91,70,62,51
+Coordinates=91,70,62,33
+Visible=False
 
 [edtAPIKey]
-Coordinates=208,159,65,51
+Coordinates=208,159,65,33
+Visible=False
 
 [edtNewContentName]
-Coordinates=411,1,117,51
+Coordinates=411,1,117,33
+Visible=False
 
 [btnDeleteContent]
-Coordinates=40,159,100,51
+Coordinates=40,159,100,33
+Visible=False
 
 [btnOK]
-Coordinates=42,70,45,51
+Coordinates=42,70,45,33
+Visible=False
 
 [actNewContent]
 Coordinates=438,284,89,33
 
 [btnNewContent]
-Coordinates=277,110,90,51
+Coordinates=277,110,90,33
+Visible=False
 
 [actDeleteContent]
 Coordinates=419,325,99,33
@@ -232,8 +243,10 @@ Coordinates=419,325,99,33
 Coordinates=321,255,113,33
 
 [lblRateLimitDay]
-Coordinates=86,236,92,51
+Coordinates=86,236,92,33
+Visible=False
 
 [grpStats]
-Coordinates=149,159,56,51
+Coordinates=149,159,56,33
+Visible=False
 
