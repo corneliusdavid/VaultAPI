@@ -1,41 +1,90 @@
 inherited frmVaultAPIMgrMain_Macintosh: TfrmVaultAPIMgrMain_Macintosh
+  ClientWidth = 520
   DesignerMasterStyle = 1
   inherited VaultTabs: TTabControl
+    Size.Width = 520.000000000000000000
     Sizes = (
-      516s
+      520s
       443s
-      516s
+      520s
       443s)
     inherited tabExplore: TTabItem
+      Size.Width = 260.000000000000000000
       ExplicitSize.cx = 50.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
+      inherited edtBrowsePath: TEdit
+        Size.Width = 480.000000000000000000
+        inherited btnBrowseRoot: TButton
+          Position.X = 296.000000000000000000
+        end
+        inherited btnBrowsePath: TButton
+          Position.X = 392.000000000000000000
+        end
+      end
       inherited lbFolders: TListBox
-        Viewport.Width = 472.000000000000000000
+        Size.Width = 480.000000000000000000
+        Viewport.Width = 476.000000000000000000
         Viewport.Height = 53.000000000000000000
       end
       inherited lbFiles: TListBox
-        Viewport.Width = 472.000000000000000000
+        Size.Width = 480.000000000000000000
+        Viewport.Width = 476.000000000000000000
         Viewport.Height = 122.000000000000000000
       end
       inherited AccountExpander: TExpander
-        ContentSize = '230'
+        Size.Width = 480.000000000000000000
+        ContentSize = '200'
         inherited grpStats: TGroupBox
           Anchors = [akLeft, akTop, akRight]
           Size.Width = 433.000000000000000000
         end
       end
+      inherited lblContent: TLabel
+        Size.Width = 480.000000000000000000
+        inherited chkUseCustomEncryptionKey: TCheckBox
+          Position.X = 260.000000000000000000
+        end
+        inherited btnDeleteContent: TButton
+          Position.X = 184.000000000000000000
+        end
+        inherited btnNewContent: TButton
+          Position.X = 104.000000000000000000
+        end
+      end
       inherited pnlEncryptKey: TPanel
         Opacity = 0.000000000000000000
+        Size.Width = 480.000000000000000000
+        inherited btnNewEncryptionKey: TButton
+          Position.X = 324.000000000000000000
+        end
+        inherited btnDeleteEncryptionKey: TButton
+          Position.X = 404.000000000000000000
+        end
+        inherited edtEncryptionKey: TEdit
+          Size.Width = 207.000000000000000000
+        end
       end
     end
     inherited tabFile: TTabItem
+      Size.Width = 260.000000000000000000
       ExplicitSize.cx = 50.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
+      inherited lblFilePath: TLabel
+        Size.Width = 510.000000000000000000
+        inherited btnBack: TSpeedButton
+          Position.X = 484.000000000000000000
+        end
+      end
       inherited mmoFile: TMemo
-        Viewport.Width = 510.000000000000000000
+        Size.Width = 514.000000000000000000
+        Viewport.Width = 514.000000000000000000
         Viewport.Height = 360.000000000000000000
       end
+      inherited lblFileDates: TLabel
+        Size.Width = 510.000000000000000000
+      end
       inherited lblContentName: TLabel
+        Size.Width = 510.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end

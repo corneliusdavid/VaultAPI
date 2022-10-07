@@ -1,45 +1,51 @@
 inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
-  ClientHeight = 616
-  ClientWidth = 400
+  ClientHeight = 615
+  ClientWidth = 520
   Constraints.MaxWidth = 520.000000000000000000
   DesignerMasterStyle = 0
   inherited VaultTabs: TTabControl
-    Size.Width = 400.000000000000000000
-    Size.Height = 616.000000000000000000
+    Size.Width = 520.000000000000000000
+    Size.Height = 615.000000000000000000
     Sizes = (
-      400s
-      567s
-      400s
-      567s)
+      520s
+      566s
+      520s
+      566s)
     inherited tabExplore: TTabItem
-      Size.Width = 200.000000000000000000
+      Size.Width = 260.000000000000000000
       ExplicitSize.cx = 50.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited edtBrowsePath: TEdit
-        Size.Width = 360.000000000000000000
+        Size.Width = 480.000000000000000000
         inherited lblBrowsePath: TLabel
           Position.X = 1.000000000000000000
           Position.Y = -25.000000000000000000
           Size.Width = 120.000000000000000000
         end
+        inherited btnBrowseRoot: TButton
+          Position.X = 412.000000000000000000
+        end
+        inherited btnBrowsePath: TButton
+          Position.X = 508.000000000000000000
+        end
       end
       inherited lbFolders: TListBox
-        Size.Width = 360.000000000000000000
-        Size.Height = 2.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 1.000000000000000000
         Viewport.Width = 360.000000000000000000
         Viewport.Height = 2.000000000000000000
       end
       inherited lbFiles: TListBox
-        Position.Y = 185.000000000000000000
-        Size.Width = 360.000000000000000000
+        Position.Y = 184.000000000000000000
+        Size.Width = 480.000000000000000000
         Size.Height = 305.000000000000000000
         Viewport.Width = 360.000000000000000000
         Viewport.Height = 305.000000000000000000
       end
       inherited AccountExpander: TExpander
         Opacity = 0.000000000000000000
-        Size.Width = 360.000000000000000000
-        ContentSize = '230'
+        Size.Width = 480.000000000000000000
+        ContentSize = '200'
         inherited edtAPIKey: TEdit
           inherited lblAPIKey: TLabel
             StyledSettings = [Family, Size, Style]
@@ -51,58 +57,60 @@ inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
         end
       end
       inherited lblContent: TLabel
-        Position.Y = 154.000000000000000000
-        Size.Width = 360.000000000000000000
+        Position.Y = 153.000000000000000000
+        Size.Width = 480.000000000000000000
         inherited chkUseCustomEncryptionKey: TCheckBox
-          Position.X = 59.000000000000000000
+          Position.X = 179.000000000000000000
         end
         inherited btnDeleteContent: TButton
-          Position.X = 284.000000000000000000
+          Position.X = 404.000000000000000000
         end
         inherited btnNewContent: TButton
-          Position.X = -16.000000000000000000
+          Position.X = 104.000000000000000000
         end
       end
       inherited pnlEncryptKey: TPanel
         Opacity = 0.000000000000000000
-        Position.Y = 510.000000000000000000
-        Size.Width = 360.000000000000000000
+        Position.Y = 509.000000000000000000
+        Size.Width = 480.000000000000000000
         inherited btnNewEncryptionKey: TButton
-          Position.X = 204.000000000000000000
+          Position.X = 324.000000000000000000
         end
         inherited btnDeleteEncryptionKey: TButton
-          Position.X = 284.000000000000000000
+          Position.X = 404.000000000000000000
         end
         inherited edtEncryptionKey: TEdit
-          Size.Width = 87.000000000000000000
-          Size.Height = 32.000000000000000000
+          Size.Width = 207.000000000000000000
         end
       end
     end
     inherited tabFile: TTabItem
-      Size.Width = 200.000000000000000000
+      Size.Width = 260.000000000000000000
       ExplicitSize.cx = 50.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited lblFilePath: TLabel
         Margins.Bottom = 1.000000000000000000
-        Size.Width = 390.000000000000000000
+        Size.Width = 510.000000000000000000
+        inherited btnBack: TSpeedButton
+          Position.X = 600.000000000000000000
+        end
       end
       inherited mmoFile: TMemo
-        Size.Width = 394.000000000000000000
-        Size.Height = 480.000000000000000000
-        Viewport.Width = 394.000000000000000000
-        Viewport.Height = 480.000000000000000000
+        Size.Width = 514.000000000000000000
+        Size.Height = 479.000000000000000000
+        Viewport.Width = 514.000000000000000000
+        Viewport.Height = 479.000000000000000000
       end
       inherited lblFileDates: TLabel
         Margins.Top = 1.000000000000000000
         Margins.Bottom = 2.000000000000000000
         Position.Y = 54.000000000000000000
-        Size.Width = 390.000000000000000000
+        Size.Width = 510.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
       inherited lblContentName: TLabel
         Position.Y = 28.000000000000000000
-        Size.Width = 390.000000000000000000
+        Size.Width = 510.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
