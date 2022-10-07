@@ -1,6 +1,7 @@
 inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
   ClientHeight = 616
   ClientWidth = 400
+  Constraints.MaxWidth = 520.000000000000000000
   DesignerMasterStyle = 0
   inherited VaultTabs: TTabControl
     Size.Width = 400.000000000000000000
@@ -25,26 +26,41 @@ inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
       inherited lbFolders: TListBox
         Size.Width = 360.000000000000000000
         Size.Height = 2.000000000000000000
-        Viewport.Width = 329.000000000000000000
-        Viewport.Height = 98.000000000000000000
+        Viewport.Width = 360.000000000000000000
+        Viewport.Height = 2.000000000000000000
       end
       inherited lbFiles: TListBox
         Position.Y = 185.000000000000000000
         Size.Width = 360.000000000000000000
         Size.Height = 305.000000000000000000
-        Viewport.Width = 329.000000000000000000
-        Viewport.Height = 161.000000000000000000
+        Viewport.Width = 360.000000000000000000
+        Viewport.Height = 305.000000000000000000
       end
       inherited AccountExpander: TExpander
         Opacity = 0.000000000000000000
         Size.Width = 360.000000000000000000
-        ContentSize = '200'
+        ContentSize = '230'
+        inherited edtAPIKey: TEdit
+          inherited lblAPIKey: TLabel
+            StyledSettings = [Family, Size, Style]
+          end
+        end
+        inherited grpStats: TGroupBox
+          Anchors = [akLeft, akTop, akRight]
+          Size.Width = 433.000000000000000000
+        end
       end
       inherited lblContent: TLabel
         Position.Y = 154.000000000000000000
         Size.Width = 360.000000000000000000
         inherited chkUseCustomEncryptionKey: TCheckBox
-          Position.X = -21.000000000000000000
+          Position.X = 59.000000000000000000
+        end
+        inherited btnDeleteContent: TButton
+          Position.X = 284.000000000000000000
+        end
+        inherited btnNewContent: TButton
+          Position.X = -16.000000000000000000
         end
       end
       inherited pnlEncryptKey: TPanel
@@ -59,6 +75,7 @@ inherited frmVaultAPIMgrMain_NmXhdpiPh: TfrmVaultAPIMgrMain_NmXhdpiPh
         end
         inherited edtEncryptionKey: TEdit
           Size.Width = 87.000000000000000000
+          Size.Height = 32.000000000000000000
         end
       end
     end

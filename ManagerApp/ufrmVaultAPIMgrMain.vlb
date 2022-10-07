@@ -1,8 +1,4 @@
-﻿[lblRateLimitRemainingMonth]
-Coordinates=768,608,156,33
-Visible=False
-
-[lblFolders]
+﻿[lblFolders]
 Coordinates=122,742,63,33
 Visible=False
 
@@ -29,14 +25,6 @@ Visible=False
 Coordinates=569,608,102,33
 Visible=False
 
-[lblAPIKey]
-Coordinates=489,608,62,33
-Visible=False
-
-[lblRateLimitDay]
-Coordinates=462,742,92,33
-Visible=False
-
 [tabFile]
 Coordinates=178,810,47,33
 Visible=False
@@ -56,24 +44,8 @@ Visible=True
 Coordinates=203,742,89,33
 Visible=False
 
-[edtAPIKey]
-Coordinates=315,742,65,33
-Visible=False
-
-[lblRateLimitRemainingDay]
-Coordinates=1085,608,144,33
-Visible=False
-
-[lblRateLimitMonth]
-Coordinates=957,608,104,33
-Visible=False
-
 [actBrowseRoot]
 Coordinates=0,387,89,33
-
-[grpStats]
-Coordinates=695,608,56,33
-Visible=False
 
 [lbFolders]
 Coordinates=159,386,60,33
@@ -151,8 +123,8 @@ Coordinates=197,10,136,33
 Visible=False
 
 []
-Coordinates=1056,529,102,51
-Visible=True
+Coordinates=240,137,69,33
+Visible=False
 
 [BindingsList1]
 Coordinates=0,0,82,33
@@ -171,16 +143,9 @@ Coordinates=82,332,91,33
 [actNextTab]
 Coordinates=110,1,69,33
 
-[Rectangle1]
-Coordinates=240,137,69,33
-Visible=False
-
 [btnBack]
 Coordinates=390,200,54,33
 Visible=False
-
-[GradientAnimation1]
-Coordinates=413,1,112,33
 
 [StyleBook]
 Coordinates=240,192,64,33

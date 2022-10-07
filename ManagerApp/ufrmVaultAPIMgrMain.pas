@@ -17,13 +17,6 @@ type
     tabExplore: TTabItem;
     tabFile: TTabItem;
     GestureManager1: TGestureManager;
-    edtAPIKey: TEdit;
-    lblAPIKey: TLabel;
-    grpStats: TGroupBox;
-    lblRateLimitDay: TLabel;
-    lblRateLimitMonth: TLabel;
-    lblRateLimitRemainingDay: TLabel;
-    lblRateLimitRemainingMonth: TLabel;
     lblBrowsePath: TLabel;
     edtBrowsePath: TEdit;
     AccountExpander: TExpander;
@@ -46,8 +39,6 @@ type
     actPreviousTab: TPreviousTabAction;
     actNextTab: TNextTabAction;
     StyleBook: TStyleBook;
-    Rectangle1: TRectangle;
-    GradientAnimation1: TGradientAnimation;
     btnBack: TSpeedButton;
     pnlEncryptKey: TPanel;
     actGetEncryptKey: TAction;
@@ -67,8 +58,14 @@ type
     btnCancel: TButton;
     actNewContentCancel: TAction;
     actNewContentSave: TAction;
+    grpStats: TGroupBox;
+    lblRateLimitDay: TLabel;
+    lblRateLimitMonth: TLabel;
+    lblRateLimitRemainingDay: TLabel;
+    lblRateLimitRemainingMonth: TLabel;
+    edtAPIKey: TEdit;
+    lblAPIKey: TLabel;
     procedure FormCreate(Sender: TObject);
-    procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure actBrowseRootExecute(Sender: TObject);
     procedure actBrowsePathExecute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -83,6 +80,7 @@ type
     procedure actDeleteContentExecute(Sender: TObject);
     procedure actNewContentCancelExecute(Sender: TObject);
     procedure actNewContentSaveExecute(Sender: TObject);
+    procedure AccountExpanderExpandedChanged(Sender: TObject);
   private
     const
       INI_SECTION = 'General';
@@ -133,21 +131,12 @@ begin
   FdmVaultAPI.OnRateLimitsSet := ShowRateLimits;
 end;
 
-procedure TfrmVaultAPIMgrMain.FormGesture(Sender: TObject;
-  const EventInfo: TGestureEventInfo; var Handled: Boolean);
+procedure TfrmVaultAPIMgrMain.AccountExpanderExpandedChanged(Sender: TObject);
 begin
-(*
-{$IFDEF ANDROID}
-  case EventInfo.GestureID of
-    sgiRight;
-    begin
-      if VaultTabs.ActiveTab <> tabExplore then
-        actPreviousTab.Execute;
-      Handled := True;
-    end;
-  end;
-{$ENDIF}
-*)
+//  grpStats.Width := AccountExpander.Width - 40;
+  lblContent.Visible := not AccountExpander.IsExpanded;
+  lblBrowsePath.Visible := not AccountExpander.IsExpanded;
+  edtBrowsePath.Visible := not AccountExpander.IsExpanded;
 end;
 
 procedure TfrmVaultAPIMgrMain.actBrowsePathExecute(Sender: TObject);

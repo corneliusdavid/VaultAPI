@@ -2,44 +2,25 @@ inherited frmVaultAPIMgrMain_Windows: TfrmVaultAPIMgrMain_Windows
   DesignerMasterStyle = 0
   inherited VaultTabs: TTabControl
     Sizes = (
-      512s
-      547s
-      512s
-      547s)
+      516s
+      443s
+      516s
+      443s)
     inherited tabExplore: TTabItem
       ExplicitSize.cx = 50.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited lbFolders: TListBox
-        Viewport.Width = 536.000000000000000000
-        Viewport.Height = 40.000000000000000000
+        Viewport.Width = 472.000000000000000000
+        Viewport.Height = 53.000000000000000000
       end
       inherited lbFiles: TListBox
-        Viewport.Width = 536.000000000000000000
-        Viewport.Height = 251.000000000000000000
+        Viewport.Width = 472.000000000000000000
+        Viewport.Height = 122.000000000000000000
       end
       inherited AccountExpander: TExpander
-        ContentSize = '200'
-        inherited Rectangle1: TRectangle
-          inherited grpStats: TGroupBox
-            Anchors = [akLeft, akTop, akRight]
-            Size.Width = 165.000000000000000000
-            inherited lblRateLimitDay: TLabel
-              Size.Width = 130.000000000000000000
-            end
-            inherited lblRateLimitMonth: TLabel
-              Size.Width = 130.000000000000000000
-            end
-            inherited lblRateLimitRemainingDay: TLabel
-              Size.Width = 130.000000000000000000
-            end
-            inherited lblRateLimitRemainingMonth: TLabel
-              Size.Width = 130.000000000000000000
-            end
-          end
-          inherited edtAPIKey: TEdit
-            Anchors = [akLeft, akTop, akRight]
-            Size.Width = 165.000000000000000000
-          end
+        ContentSize = '230'
+        inherited grpStats: TGroupBox
+          Size.Width = 433.000000000000000000
         end
       end
       inherited pnlEncryptKey: TPanel
@@ -53,9 +34,9 @@ inherited frmVaultAPIMgrMain_Windows: TfrmVaultAPIMgrMain_Windows
         Margins.Bottom = 1.000000000000000000
       end
       inherited mmoFile: TMemo
-        Size.Height = 460.000000000000000000
-        Viewport.Width = 506.000000000000000000
-        Viewport.Height = 460.000000000000000000
+        Size.Height = 356.000000000000000000
+        Viewport.Width = 510.000000000000000000
+        Viewport.Height = 356.000000000000000000
       end
       inherited lblFileDates: TLabel
         Margins.Top = 1.000000000000000000
@@ -64,6 +45,7 @@ inherited frmVaultAPIMgrMain_Windows: TfrmVaultAPIMgrMain_Windows
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
       inherited lblContentName: TLabel
+        Position.Y = 28.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
